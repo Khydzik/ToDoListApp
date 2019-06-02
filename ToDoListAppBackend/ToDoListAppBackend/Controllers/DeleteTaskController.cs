@@ -18,11 +18,9 @@ namespace ToDoListAppBackend.Controllers
 
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteTask([FromBody]DeleteTaskModel input)
+        public async Task<TaskModel> DeleteTask([FromBody]DeleteTaskModel input)
         {
-            await _taskService.DeleteTaskAsync(input.IdTask);
-
-            return Ok();
+           return await _taskService.DeleteTaskAsync(input.IdTask);
         }
     }
 }

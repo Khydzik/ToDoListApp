@@ -12,3 +12,17 @@ E:\ToDoListAplication\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debu
 E:\ToDoListAplication\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.csproj.CopyComplete
 E:\ToDoListAplication\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.dll
 E:\ToDoListAplication\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.pdb
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Application.deps.json
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Application.runtimeconfig.json
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Application.runtimeconfig.dev.json
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Application.dll
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Application.pdb
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Data.dll
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Data.pdb
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.csprojAssemblyReference.cache
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.csproj.CoreCompileInputs.cache
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.AssemblyInfoInputs.cache
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.AssemblyInfo.cs
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.csproj.CopyComplete
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.dll
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Application\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Application.pdb

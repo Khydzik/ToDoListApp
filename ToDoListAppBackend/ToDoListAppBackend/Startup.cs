@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +10,7 @@ using ToDoListAppBackend.Extensions.EnsureMigration;
 using ToDoListAppBackend.Extensions.RegisterExtensions;
 using ToDoListAppBackend.Extensions.SwaggerExtentions;
 using ToDoListAppBackend.Filters;
+using ToDoListAppBackend.Formatters;
 using ToDoListAppBackend.Models;
 
 namespace ToDoListAppBackend
@@ -31,6 +33,8 @@ namespace ToDoListAppBackend
                 apt => apt.MigrationsAssembly(typeof(ApplicationContext).Namespace)));
             services.AddMvc(config =>
             {
+                config.OutputFormatters.RemoveType(typeof(JsonOutputFormatter));
+                config.OutputFormatters.Add(new CustomJsonOutputFormatter());
                 config.Filters.Add(typeof(GlobalExceptionFilter));
             });           
             services.AddTransient<DataSeeder>();

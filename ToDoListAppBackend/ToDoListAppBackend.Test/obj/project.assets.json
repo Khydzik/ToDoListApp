@@ -8296,11 +8296,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Test\\ToDoListAppBackend.Test.csproj",
+      "projectUniqueName": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Test\\ToDoListAppBackend.Test.csproj",
       "projectName": "ToDoListAppBackend.Test",
-      "projectPath": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Test\\ToDoListAppBackend.Test.csproj",
+      "projectPath": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Test\\ToDoListAppBackend.Test.csproj",
       "packagesPath": "C:\\Users\\Volodya Khydzik\\.nuget\\packages\\",
-      "outputPath": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Test\\obj\\",
+      "outputPath": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8319,14 +8319,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Application\\ToDoListAppBackend.Application.csproj": {
-              "projectPath": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Application\\ToDoListAppBackend.Application.csproj"
+            "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Application\\ToDoListAppBackend.Application.csproj": {
+              "projectPath": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Application\\ToDoListAppBackend.Application.csproj"
             },
-            "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Data\\ToDoListAppBackend.Data.csproj": {
-              "projectPath": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Data\\ToDoListAppBackend.Data.csproj"
+            "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Data\\ToDoListAppBackend.Data.csproj": {
+              "projectPath": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Data\\ToDoListAppBackend.Data.csproj"
             },
-            "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend\\ToDoListAppBackend.csproj": {
-              "projectPath": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend\\ToDoListAppBackend.csproj"
+            "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend\\ToDoListAppBackend.csproj": {
+              "projectPath": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend\\ToDoListAppBackend.csproj"
             }
           }
         }

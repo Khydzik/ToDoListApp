@@ -7,25 +7,25 @@ import { connect } from 'react-redux';
 class TaskList extends React.Component {
 
   componentDidMount() {
-    this.props.fetchTasks()
+    this.props.getTasks()
 }
 
   render() {
-    return this.props.loading ? (
+    return(
       <FlatList
         style={{ alignSelf: 'stretch' }}
         data={this.props.todos}
-        renderItem={({ item }) => (
+        renderItem={({item}) => (
           <TaskItem
-            text={item.text}
-            completed={item.completed}
-            deleteTodo={() => this.props.deleteTodo(item.id)}
-            completeTodo={() => this.props.completeTodo(item.id)}
+            text={item.name}
+            completed={item.isDone}
+            deleteTodo={() => this.props.deleteTask(item.id)}
+            completeTodo={() => this.props.completeTask(item.id)}
           />
         )}
         keyExtractor={(item, index) => `${index}`}
       />
-    ) : <Text>Loading...</Text>;
+    )
   }
 }
 
@@ -35,11 +35,11 @@ const mapStateToProps = state => {
     loading: state.loading
   };
 };
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    deleteTodo: id => dispatch(actions.deleteTodo(id)),
-    completeTodo: id => dispatch(actions.completeTodo(id)),
-    fetchTasks: () => dispatch(actions.fetchTasks())
+    deleteTask: id => dispatch(actions.deleteTask(id)),
+    completeTask: id => dispatch(actions.updateTask(id)),
+    getTasks: () => dispatch(actions.getTasks()),
   };
 };
 

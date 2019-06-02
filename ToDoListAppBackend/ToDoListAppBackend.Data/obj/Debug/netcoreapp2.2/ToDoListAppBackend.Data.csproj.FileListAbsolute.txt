@@ -9,3 +9,14 @@ E:\ToDoListAplication\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netco
 E:\ToDoListAplication\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.dll
 E:\ToDoListAplication\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.pdb
 E:\ToDoListAplication\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.csprojAssemblyReference.cache
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Data.deps.json
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Data.runtimeconfig.json
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Data.runtimeconfig.dev.json
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Data.dll
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\bin\Debug\netcoreapp2.2\ToDoListAppBackend.Data.pdb
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.csprojAssemblyReference.cache
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.csproj.CoreCompileInputs.cache
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.AssemblyInfoInputs.cache
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.AssemblyInfo.cs
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.dll
+E:\ToDoListApp\ToDoListAppBackend\ToDoListAppBackend.Data\obj\Debug\netcoreapp2.2\ToDoListAppBackend.Data.pdb

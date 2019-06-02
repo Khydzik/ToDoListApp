@@ -3697,11 +3697,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Application\\ToDoListAppBackend.Application.csproj",
+      "projectUniqueName": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Application\\ToDoListAppBackend.Application.csproj",
       "projectName": "ToDoListAppBackend.Application",
-      "projectPath": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Application\\ToDoListAppBackend.Application.csproj",
+      "projectPath": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Application\\ToDoListAppBackend.Application.csproj",
       "packagesPath": "C:\\Users\\Volodya Khydzik\\.nuget\\packages\\",
-      "outputPath": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Application\\obj\\",
+      "outputPath": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3720,8 +3720,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Data\\ToDoListAppBackend.Data.csproj": {
-              "projectPath": "E:\\ToDoListAplication\\ToDoListAppBackend\\ToDoListAppBackend.Data\\ToDoListAppBackend.Data.csproj"
+            "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Data\\ToDoListAppBackend.Data.csproj": {
+              "projectPath": "E:\\ToDoListApp\\ToDoListAppBackend\\ToDoListAppBackend.Data\\ToDoListAppBackend.Data.csproj"
             }
           }
         }

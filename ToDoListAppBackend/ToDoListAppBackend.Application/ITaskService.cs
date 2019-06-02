@@ -10,6 +10,6 @@ namespace ToDoListAppBackend.Application
         Task<List<TaskModel>> GetTasksAsync();
         Task<TaskModel> DeleteTaskAsync(Guid id);
         Task<TaskModel> CreateTaskAsync(string nameOfTask, bool isDone);
-        Task<TaskModel> UpdateTaskAsync(Guid id, bool isDone);
+        Task<TaskModel> UpdateTaskAsync(Guid id);
     }
 }

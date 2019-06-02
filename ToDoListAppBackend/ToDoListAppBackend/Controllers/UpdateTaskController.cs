@@ -20,7 +20,7 @@ namespace ToDoListAppBackend.Controllers
         [HttpPatch]
         public async Task<TaskModel> UpdateTask([FromBody]EditTaskModel input)
         {
-            var result = await _taskService.UpdateTaskAsync(input.IdTask, input.IsDone);
+            var result = await _taskService.UpdateTaskAsync(input.IdTask);
 
             if (result == null)
                 throw new NullReferenceException("This task is not update!!!");

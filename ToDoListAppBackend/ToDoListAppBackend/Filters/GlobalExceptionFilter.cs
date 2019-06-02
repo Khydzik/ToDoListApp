@@ -32,10 +32,6 @@ namespace ToDoListAppBackend.Filters
                     statusCode = HttpStatusCode.NotFound;
                     error = GetResponseError(argumentException);
                     break;
-                case NullReferenceException nullReferenceException:
-                    statusCode = HttpStatusCode.NoContent;
-                    error = GetResponseError(nullReferenceException);
-                    break;
                 default:
                     statusCode = HttpStatusCode.InternalServerError;
                     error = GetResponseError(ex);

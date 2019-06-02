@@ -14,15 +14,15 @@ class AddToDoList extends React.Component {
 
   onClickButtonAdd = () => {
     this.props.addTask({
-      text: this.state.inputText,
-      id: Math.random() * 100
+      name: this.state.inputText,
+      isDone : false
     });
 
     this.setState({ inputText: '' });
   };
 
-  onChangeHandler = text => {
-    this.setState({ inputText: text });
+  onChangeHandler = name => {
+    this.setState({ inputText: name });
   };
 
   render() {
@@ -43,7 +43,7 @@ class AddToDoList extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addTask: item => dispatch(actions.addTodo(item))
+    addTask: task => dispatch(actions.addTask(task))
   };
 };
 

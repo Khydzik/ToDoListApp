@@ -51,7 +51,7 @@ namespace ToDoListAppBackend.Application
             return await _taskRepository.InsertAsync(newTask);
         }
 
-        public async Task<TaskModel> UpdateTaskAsync(Guid id, bool isDone)
+        public async Task<TaskModel> UpdateTaskAsync(Guid id)
         {
             TaskModel task = await _taskRepository.GetAsync(u => u.Id == id);
 
@@ -60,7 +60,7 @@ namespace ToDoListAppBackend.Application
                 throw new ArgumentException("Such task isn`t exist");
             }
 
-            task.IsDone = isDone;
+            task.IsDone = true ? false : true;
 
             return await _taskRepository.UpdateAsync(task);
         }

@@ -15,6 +15,7 @@ namespace ToDoListAppBackend.Controllers
 
         public GetAllTasksController(ITaskService taskService)
         {
+
             _taskService = taskService;
         }
 
@@ -24,7 +25,7 @@ namespace ToDoListAppBackend.Controllers
             var tasks = await _taskService.GetTasksAsync();
 
             if (tasks == null)
-                throw new NullReferenceException("There are no created tasks");
+                throw new ArgumentException("There are no created tasks");
 
 
             return tasks;
