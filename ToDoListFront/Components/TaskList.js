@@ -31,8 +31,7 @@ class TaskList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    todos: state.todos,
-    loading: state.loading
+    todos: state.todos
   };
 };
 const mapDispatchToProps = (dispatch) => {

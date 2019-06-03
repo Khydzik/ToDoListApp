@@ -60,7 +60,7 @@ namespace ToDoListAppBackend.Application
                 throw new ArgumentException("Such task isn`t exist");
             }
 
-            task.IsDone = true ? false : true;
+            task.IsDone = task.IsDone == true ? false : true;
 
             return await _taskRepository.UpdateAsync(task);
         }

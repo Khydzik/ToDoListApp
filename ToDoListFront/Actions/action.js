@@ -1,43 +1,49 @@
 import * as types from '../Constants/ActionTypes';
 
-const BASE_URL = 'http://192.168.0.101:5000/api';
+const BASE_URL = 'http://192.168.103.66:5000/api';
 
 export const addTaskBegin = () => ({ type: types.ADD_TASK_BEGIN });
+export const addTaskSuccess = task => ({ type: types.ADD_TASK_SUCCESS, task });
+
 export const deleteTaskBegin = () => ({ type: types.DELETE_TASK_BEGIN });
 export const completeTaskBegin = () => ({ type: types.COMPLETE_TASK_BEGIN });
 export const getTasksBegin = () => ({ type: types.GET_TASKS_BEGIN });
 
-export const addTaskSuccess = task => ({ type: types.ADD_TASK_SUCCESS, task });
-export const deleteTaskSuccess = () => ({ type: types.DELETE_TASK_SUCCESS });
+export const deleteTaskSuccess = task => ({
+  type: types.DELETE_TASK_SUCCESS,
+  task
+});
 export const completeTaskSuccess = task => ({
   type: types.COMPLETE_TASK_SUCCESS,
   task
 });
 export const getTasksSuccess = tasks => ({
   type: types.GET_TASKS_SUCCESS,
-  task
+  tasks
 });
 
 export const addTaskFailure = error => ({
   type: types.ADD_TASK_FAILURE,
   error
 });
-export const deleteTaskFailure = error => ({
-  type: types.DELETE_TASK_FAILURE,
-  error
-});
+// export const deleteTaskFailure = error => ({
+//   type: types.DELETE_TASK_FAILURE,
+//   error
+// });
+
 export const completeTaskFailure = error => ({
   type: types.COMPLETE_TASK_FAILURE,
   error
 });
+
 export const getTasksFailure = error => ({
-  type: types.GET_TASKS_SUCCESS,
+  type: types.GET_TASKS_FAILURE,
   error
 });
 
 export function deleteTask(id) {
   return dispatch => {
-    dispatch(deleteTaskB);
+    dispatch(deleteTaskBegin());
     fetch(`${BASE_URL}/DeleteTask`, {
       method: 'DELETE',
       headers: {
@@ -50,33 +56,36 @@ export function deleteTask(id) {
     })
       .then(response => response.json())
       .then(responseJson => {
-        dispatch(deleteTaskS(responseJson));
+        dispatch(deleteTaskSuccess(responseJson.result));
       })
       .catch(err => {
-        dispatch(deleteTaskF(err.result));
+        dispatch(deleteTaskFailure(err.result));
       });
   };
 }
 
 export function getTasks() {
   return dispatch => {
-    dispatch(getTasksB());
-     fetch(`${BASE_URL}/GetAllTasks`)
-      .then(responce => responce.json())
-      .then(responseJson => {    
-        dispatch(getTasksS(responseJson));
+    dispatch(getTasksBegin());
+    fetch(`${BASE_URL}/GetAllTasks`)
+      .then(response =>
+        // if (!response.ok) {
+        //   throw response;
+        // }
+        response.json()
+      )
+      .then(responseJson => {
+        dispatch(getTasksSuccess(responseJson.result));
       })
       .catch(err => {
-        console.log("sdfsdf");
-        dispatch(getTasksF(err.result));
+        dispatch(getTasksFailure(err));
       });
   };
 }
 
 export function addTask(task) {
-
   return dispatch => {
-    dispatch(addTaskB);
+    dispatch(addTaskBegin());
 
     fetch(`${BASE_URL}/AddTask`, {
       method: 'POST',
@@ -91,17 +100,17 @@ export function addTask(task) {
     })
       .then(response => response.json())
       .then(responseJson => {
-        dispatch(addTaskS(responseJson));
+        dispatch(addTaskSuccess(responseJson.result));
       })
       .catch(err => {
-        dispatch(addTaskF(err.result));
+        dispatch(addTaskFailure(err.result));
       });
   };
 }
 
 export function updateTask(id) {
   return dispatch => {
-    dispatch(updateTaskB);
+    dispatch(completeTaskBegin());
     fetch(`${BASE_URL}/UpdateTask`, {
       method: 'PATCH',
       headers: {
@@ -114,90 +123,11 @@ export function updateTask(id) {
     })
       .then(response => response.json())
       .then(responseJson => {
-        dispatch(updateTaskS(responseJson));
+        console.log(responseJson.result);
+        dispatch(completeTaskSuccess(responseJson.result));
       })
       .catch(err => {
-        dispatch(updateTaskF(err.result));
+        dispatch(completeTaskFailure(err.result));
       });
-  };
-}
-
-function getTasksB() {
-  return {
-    type: types.GET_TASKS_BEGIN
-  };
-}
-
-function getTasksS(tasks) {
-  return {
-    type: types.GET_TASKS_SUCCESS,
-    tasks
-  };
-}
-
-function getTasksF(error) {
-  return {
-    type: types.GET_TASKS_FAILURE,
-    error
-  };
-}
-
-function addTaskB() {
-  return {
-    type: types.ADD_TASK_BEGIN
-  };
-}
-
-function addTaskS(task) {
-  return {
-    type: types.ADD_TASK_SUCCESS,
-    task
-  };
-}
-
-function addTaskF(error) {
-  return {
-    type: types.ADD_TASK_FAILURE,
-    error
-  };
-}
-
-function deleteTaskB() {
-  return {
-    type: types.DELETE_TASK_BEGIN
-  };
-}
-
-function deleteTaskS(task) {
-  return {
-    type: types.DELETE_TASK_SUCCESS,
-    task
-  };
-}
-
-function deleteTaskF(error) {
-  return {
-    type: types.DELETE_TASK_FAILURE,
-    error
-  };
-}
-
-function updateTaskB() {
-  return {
-    type: types.COMPLETE_TASK_BEGIN
-  };
-}
-
-function updateTaskS(task) {
-  return {
-    type: types.COMPLETE_TASK_SUCCESS,
-    task
-  };
-}
-
-function updateTaskF(error) {
-  return {
-    type: types.completeTaskFailure,
-    error
   };
 }

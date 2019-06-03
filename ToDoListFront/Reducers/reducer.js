@@ -5,7 +5,8 @@ const initialState = {
   error: null
 };
 
-export default function reducer(state = initialState, action) {                                                      
+export default function reducer(state = initialState, action) {        
+                                               
   switch (action.type) {
     case actions.GET_TASKS_BEGIN:
       return {
@@ -15,7 +16,7 @@ export default function reducer(state = initialState, action) {
     case actions.GET_TASKS_SUCCESS:
       return {
         ...state,
-        todos: action.tasks
+      todos: action.tasks
       };
 
     case actions.GET_TASKS_FAILURE:
@@ -26,8 +27,7 @@ export default function reducer(state = initialState, action) {
 
     case actions.ADD_TASK_BEGIN:
       return {
-        ...state,
-        loading: true
+        ...state
       };
 
     case actions.ADD_TASK_SUCCESS:
@@ -47,11 +47,11 @@ export default function reducer(state = initialState, action) {
         ...state
       };
 
-    case actions.DELETE_TASK_SUCCESS:
-      return {
-        ...state,
-        todos: state.todos.filter(todo => todo.id !== action.task.id)
-      };
+     case actions.DELETE_TASK_SUCCESS:
+       return {
+         ...state,
+         todos: state.todos.filter(todo => todo.id != action.task.id)
+       };
 
     case actions.DELETE_TASK_FAILURE:
       return {
