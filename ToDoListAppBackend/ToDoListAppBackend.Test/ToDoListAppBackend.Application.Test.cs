@@ -10,8 +10,7 @@ using Xunit;
 namespace ToDoListAppBackend.Test
 {
     [ExcludeFromCodeCoverage]
-    public class ToDoListAppBackend
-    {
+    public class ToDoListAppBackend    {
 
         [Fact]
         public async Task CreateTaskCheckReturnTaskExist_Test()
@@ -56,7 +55,6 @@ namespace ToDoListAppBackend.Test
         public async Task ChangeTaskDoneCheckIsNullTask_Test()
         {
             var taskId = new Guid();
-            var isDone = false;
             TaskModel task = null;
 
             var mock = new Mock<IRepository<TaskModel>>();
@@ -65,7 +63,7 @@ namespace ToDoListAppBackend.Test
 
             var taskService = new TaskService(mock.Object);
 
-            ArgumentException ex = await Assert.ThrowsAsync<ArgumentException>(() => taskService.UpdateTaskAsync(taskId, isDone));
+            ArgumentException ex = await Assert.ThrowsAsync<ArgumentException>(() => taskService.UpdateTaskAsync(taskId));
 
             Assert.Equal("Such task isn`t exist", ex.Message);
         }
@@ -76,7 +74,6 @@ namespace ToDoListAppBackend.Test
             var mock = new Mock<IRepository<TaskModel>>();
 
             Guid taskId = new Guid("a45d558e-3442-4613-943f-aac0a2a3c54e");
-            bool isDone = true;
             var task = new TaskModel
             {
                 Id = new Guid("a45d558e-3442-4613-943f-aac0a2a3c54e"),
@@ -89,7 +86,7 @@ namespace ToDoListAppBackend.Test
 
             var taskService = new TaskService(mock.Object);
 
-            var result = await taskService.UpdateTaskAsync(taskId, isDone);
+            var result = await taskService.UpdateTaskAsync(taskId);
 
             Assert.True(result.IsDone);
         }

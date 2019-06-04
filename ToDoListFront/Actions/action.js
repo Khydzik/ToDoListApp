@@ -26,10 +26,6 @@ export const addTaskFailure = error => ({
   type: types.ADD_TASK_FAILURE,
   error
 });
-// export const deleteTaskFailure = error => ({
-//   type: types.DELETE_TASK_FAILURE,
-//   error
-// });
 
 export const completeTaskFailure = error => ({
   type: types.COMPLETE_TASK_FAILURE,
@@ -44,7 +40,7 @@ export const getTasksFailure = error => ({
 export function deleteTask(id) {
   return dispatch => {
     dispatch(deleteTaskBegin());
-    fetch(`${BASE_URL}/DeleteTask`, {
+    fetch(`${BASE_URL}/Task`, {
       method: 'DELETE',
       headers: {
         Accept: 'application/json',
@@ -58,7 +54,8 @@ export function deleteTask(id) {
       .then(responseJson => {
         dispatch(deleteTaskSuccess(responseJson.result));
       })
-      .catch(err => {
+      .catch(err => {        
+        console.log(err.message);
         dispatch(deleteTaskFailure(err.result));
       });
   };
@@ -67,17 +64,14 @@ export function deleteTask(id) {
 export function getTasks() {
   return dispatch => {
     dispatch(getTasksBegin());
-    fetch(`${BASE_URL}/GetAllTasks`)
-      .then(response =>
-        // if (!response.ok) {
-        //   throw response;
-        // }
-        response.json()
-      )
+    fetch(`${BASE_URL}/Task`)
+      .then(response => response.json())
       .then(responseJson => {
+        console.log('dsfs');
         dispatch(getTasksSuccess(responseJson.result));
       })
       .catch(err => {
+        console.log(err.message);
         dispatch(getTasksFailure(err));
       });
   };
@@ -87,7 +81,7 @@ export function addTask(task) {
   return dispatch => {
     dispatch(addTaskBegin());
 
-    fetch(`${BASE_URL}/AddTask`, {
+    fetch(`${BASE_URL}/Task`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -102,7 +96,8 @@ export function addTask(task) {
       .then(responseJson => {
         dispatch(addTaskSuccess(responseJson.result));
       })
-      .catch(err => {
+      .catch(err => {        
+        console.log(err.message);
         dispatch(addTaskFailure(err.result));
       });
   };
@@ -111,7 +106,7 @@ export function addTask(task) {
 export function updateTask(id) {
   return dispatch => {
     dispatch(completeTaskBegin());
-    fetch(`${BASE_URL}/UpdateTask`, {
+    fetch(`${BASE_URL}/Task`, {
       method: 'PATCH',
       headers: {
         Accept: 'application/json',
@@ -126,7 +121,8 @@ export function updateTask(id) {
         console.log(responseJson.result);
         dispatch(completeTaskSuccess(responseJson.result));
       })
-      .catch(err => {
+      .catch(err => {        
+        console.log(err.message);
         dispatch(completeTaskFailure(err.result));
       });
   };
